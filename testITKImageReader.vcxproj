@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4924EB4B-CD84-4340-9EB3-DFF57EC10ECE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>testITKImageReader</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>G:\InsightToolkit-4.13.0\Modules\IO;G:\InsightToolkit-4.13.0\Modules\Core;G:\InsightToolkit-4.13.0\Modules\Core\Common;G:\InsightToolkit-4.13.0\Modules\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_FAR_MAPPINGS_NO_DEPRECATE;_CRT_IS_WCTYPE_NO_DEPRECATE;_CRT_MANAGED_FP_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE_GLOBALS;_CRT_SETERRORMODE_BEEP_SLEEP_NO_DEPRECATE;_CRT_TIME_FUNCTIONS_NO_DEPRECATE;_CRT_VCCLRIT_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;ITK_IO_FACTORY_REGISTER_MANAGER;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalOptions>/I"G:\InsightToolkit-4.13.0\build\Examples\ITKFactoryRegistration" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\Watersheds\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\Voronoi\include" /I"G:\InsightToolkit-4.13.0\Modules\Video\IO\include" /I"G:\InsightToolkit-4.13.0\Modules\Video\Filtering\include" /I"G:\InsightToolkit-4.13.0\Modules\Video\Core\include" /I"G:\InsightToolkit-4.13.0\Modules\Bridge\VTK\include" /I"G:\InsightToolkit-4.13.0\Modules\Core\TestKernel\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\SpatialFunction\include" /I"G:\InsightToolkit-4.13.0\Modules\Registration\RegistrationMethodsv4\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\RegionGrowing\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\QuadEdgeMeshFiltering\include" /I"G:\InsightToolkit-4.13.0\Modules\Numerics\NeuralNetworks\include" /I"G:\InsightToolkit-4.13.0\Modules\Registration\Metricsv4\include" /I"G:\InsightToolkit-4.13.0\Modules\Numerics\Optimizersv4\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\MarkovRandomFieldsClassifiers\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\LevelSetsv4\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\LabelVoting\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\libLBFGS\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\KLMRegionGrowing\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageNoise\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageFusion\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\VTK\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\TransformMatlab\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\TransformInsightLegacy\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\TransformHDF5\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\TransformBase\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\TransformFactory\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\Stimulate\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\Siemens\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\RAW\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\PNG\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\PNG\src" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\PNG\src" /I"G:\InsightToolkit-4.13.0\Modules\IO\NRRD\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\NrrdIO\src\NrrdIO" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\NrrdIO\src\NrrdIO" /I"G:\InsightToolkit-4.13.0\Modules\IO\NIFTI\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\Meta\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\Mesh\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\MRC\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\MINC\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\HDF5\src\itkhdf5\src" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\HDF5\src\itkhdf5" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\HDF5\src\itkhdf5" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\MINC\src\libminc\volume_io\Include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\MINC\src\libminc\libsrc2" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\MINC\src\libminc\libcommon" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\MINC\src\libminc" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\MINC" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\MINC" /I"G:\InsightToolkit-4.13.0\Modules\IO\LSM\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\TIFF\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\TIFF\src" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\TIFF\src\itktiff" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\TIFF\src" /I"G:\InsightToolkit-4.13.0\Modules\IO\JPEG\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\JPEG\src" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\JPEG\src" /I"G:\InsightToolkit-4.13.0\Modules\IO\HDF5\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\GIPL\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\GE\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\IPL\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\GDCM\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\CSV\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\Bruker\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\BioRad\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\BMP\include" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\HDF5\src" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\HDF5\src" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\GPUThresholding\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\GPUSmoothing\include" /I"G:\InsightToolkit-4.13.0\Modules\Registration\GPUPDEDeformable\include" /I"G:\InsightToolkit-4.13.0\Modules\Registration\GPUCommon\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\GPUImageFilterBase\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\GPUAnisotropicSmoothing\include" /I"G:\InsightToolkit-4.13.0\Modules\Core\GPUFiniteDifference\include" /I"G:\InsightToolkit-4.13.0\Modules\Core\GPUCommon\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\GIFTI\src\gifticlib" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\NIFTI\src\nifti\znzlib" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\NIFTI\src\nifti\niftilib" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\GDCM\src\gdcm\Source\DataStructureAndEncodingDefinition" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\GDCM\src\gdcm\Source\MessageExchangeDefinition" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\GDCM\src\gdcm\Source\InformationObjectDefinition" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\GDCM\src\gdcm\Source\Common" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\GDCM\src\gdcm\Source\DataDictionary" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\GDCM\src\gdcm\Source\MediaStorageAndFileFormat" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\GDCM\src\gdcm\Source\Common" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\GDCM" /I"G:\InsightToolkit-4.13.0\Modules\Registration\FEM\include" /I"G:\InsightToolkit-4.13.0\Modules\Registration\PDEDeformable\include" /I"G:\InsightToolkit-4.13.0\Modules\Numerics\FEM\include" /I"G:\InsightToolkit-4.13.0\Modules\Registration\Common\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\SpatialObjects\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\XML\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\Expat\src\expat" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\Expat\src\expat" /I"G:\InsightToolkit-4.13.0\Modules\Numerics\Eigen\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\DisplacementField\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\DiffusionTensorImage\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\Denoising\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\DeformableMesh\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\Deconvolution\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\DICOMParser\src\DICOMParser" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\DICOMParser\src\DICOMParser" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\Convolution\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\FFT\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\Colormap\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\Classifiers\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\BioCell\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\BiasCorrection\include" /I"G:\InsightToolkit-4.13.0\Modules\Numerics\Polynomials\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\AntiAlias\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\LevelSets\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\SignedDistanceFunction\include" /I"G:\InsightToolkit-4.13.0\Modules\Numerics\Optimizers\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageFeature\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageSources\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageGradient\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\Smoothing\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageCompare\include" /I"G:\InsightToolkit-4.13.0\Modules\IO\ImageBase\include" /I"G:\InsightToolkit-4.13.0\build\Modules\IO\ImageBase" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\FastMarching\include" /I"G:\InsightToolkit-4.13.0\Modules\Core\QuadEdgeMesh\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\DistanceMap\include" /I"G:\InsightToolkit-4.13.0\Modules\Numerics\NarrowBand\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageLabel\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\BinaryMathematicalMorphology\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\MathematicalMorphology\include" /I"G:\InsightToolkit-4.13.0\Modules\Segmentation\ConnectedComponents\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\Thresholding\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageIntensity\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\Path\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageStatistics\include" /I"G:\InsightToolkit-4.13.0\Modules\Core\SpatialObjects\include" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\MetaIO\src\MetaIO\src" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\MetaIO\src\MetaIO\src" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\ZLIB\src" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\ZLIB\src" /I"G:\InsightToolkit-4.13.0\Modules\Core\Mesh\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageCompose\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\LabelMap\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\AnisotropicSmoothing\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageGrid\include" /I"G:\InsightToolkit-4.13.0\Modules\Core\ImageFunction\include" /I"G:\InsightToolkit-4.13.0\Modules\Core\Transform\include" /I"G:\InsightToolkit-4.13.0\Modules\Numerics\Statistics\include" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\Netlib" /I"G:\InsightToolkit-4.13.0\Modules\Core\ImageAdaptors\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\CurvatureFlow\include" /I"G:\InsightToolkit-4.13.0\Modules\Filtering\ImageFilterBase\include" /I"G:\InsightToolkit-4.13.0\Modules\Core\FiniteDifference\include" /I"G:\InsightToolkit-4.13.0\Modules\Core\Common\include" /I"G:\InsightToolkit-4.13.0\build\Modules\Core\Common" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\VNLInstantiation\include" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\VNL\src\vxl\core" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\VNL\src\vxl\vcl" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\VNL\src\vxl\v3p\netlib" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\VNL\src\vxl\core" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\VNL\src\vxl\vcl" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\VNL\src\vxl\v3p\netlib" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\KWSys\src" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\KWIML\src" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\KWIML\src" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\DoubleConversion\src\double-conversion" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\DoubleConversion\src\double-conversion" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\KWSys\src\KWSys" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\VNL\src\vxl\core\vnl\algo" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\VNL\src\vxl\core\vnl" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\HDF5\src\itkhdf5\c++\src" /I"G:\InsightToolkit-4.13.0\Modules\ThirdParty\HDF5\src\itkhdf5\c++\src" /I"G:\InsightToolkit-4.13.0\build\Modules\ThirdParty\HDF5\src\itkhdf5\src" %(AdditionalOptions)</AdditionalOptions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>G:\InsightToolkit-4.13.0\build\lib\Debug\itkdouble-conversion-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itksys-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkvnl_algo-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkvnl-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkv3p_netlib-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itknetlib-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkvcl-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKCommon-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkNetlibSlatec-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKStatistics-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKTransform-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKLabelMap-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKMesh-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkzlib-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKMetaIO-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKSpatialObjects-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKPath-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKQuadEdgeMesh-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOImageBase-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKOptimizers-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKPolynomials-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKBiasCorrection-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKBioCell-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKDICOMParser-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKEXPAT-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOXML-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOSpatialObjects-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKFEM-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmDICT-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmMSFF-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKznz-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKniftiio-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKgiftiio-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\libitkhdf5_cpp_Dd.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\libitkhdf5_Dd.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOBMP-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOBioRad-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOBruker-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOCSV-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOGDCM-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOIPL-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOGE-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOGIPL-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOHDF5-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkjpeg-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOJPEG-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itktiff-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOTIFF-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOLSM-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkminc2-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOMINC-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOMRC-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOMesh-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOMeta-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIONIFTI-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKNrrdIO-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIONRRD-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkpng-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOPNG-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOSiemens-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOStimulate-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKTransformFactory-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOTransformBase-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOTransformHDF5-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOTransformInsightLegacy-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOTransformMatlab-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKIOVTK-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKKLMRegionGrowing-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itklbfgs-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKOptimizersv4-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKVTK-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKVideoCore-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKVideoIO-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKWatersheds-4.13d.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmIOD-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmDSED-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmCommon-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmjpeg8-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmjpeg12-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmjpeg16-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmopenjp2-4.13.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\itkgdcmcharls-4.13.lib;rpcrt4.lib;comctl32.lib;wsock32.lib;ws2_32.lib;Psapi.lib;G:\InsightToolkit-4.13.0\build\lib\Debug\ITKVNLInstantiation-4.13.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Container4-5.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Layer5-2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Path4-4.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Source5_5.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Source5_6.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Source6.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Source7.cpp" />
+    <ClCompile Include="Source8.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="testITKImageReader.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
